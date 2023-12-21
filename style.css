@@ -28,7 +28,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 .header-content {
     position: relative;
@@ -40,11 +39,32 @@ body {
     padding: 10px;
     margin: 0 auto;
 }
-.sun-icon {
-    width: 40px; 
-    height: 20px;
-    margin-top: 18px;
-}
+.theme-toggler{
+    background: plum; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.6rem;
+    width: 4.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0.2rem;
+    margin-top: 25px;
+ }
+  .theme-toggler span{
+     font-size: 1.2rem;
+     width: 50%;
+     height: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+.theme-toggler span.active{
+     background-color: rgb(233, 99, 233);
+     color: white;
+     border-radius: 5px;
+     padding: 12px;
+ }
 .desktop-background {
     position: absolute;
     top: 0;
@@ -78,6 +98,11 @@ body {
   position: relative;
   z-index: 2;
   color: white;
+  box-shadow: 0 2rem 3rem rgba(56, 55, 55, 0.5);
+  transition: all 300ms ease-in-out;
+}
+.tasks-container:hover {
+  box-shadow: none;
 }
 
 .tasks-container-header {
@@ -157,7 +182,9 @@ body {
     appearance: none;
     background-color: transparent;
 }
-
+.task-unit-checkbox:hover{
+    background-color: rgb(233, 99, 233);
+}
 .task-unit-checkbox::before {
     content: '\2713'; /* Unicode character for a checkmark */
     position: absolute;
@@ -165,7 +192,7 @@ body {
     left: 60%;
     transform: translate(-50%, -50%);
     font-size: 14px;
-    color: blue; 
+    color: white; 
     visibility: hidden;
 }
 .task-unit-checkbox:checked::before {
