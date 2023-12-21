@@ -7,42 +7,56 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container-1">
-        <h1 class="tasks-heading">Zee's Todo List</h1>
+    <div class="container">
+        <div class="container-header-1">
+            <div class="header-content">
+                <h1 class="tasks-heading">Zee's To Do</h1>
+                <img src="./images/icon-sun.svg" alt="Sun Icon" class="sun-icon">
+            </div>
+            <img src="./images/bg-desktop-dark.jpg" alt="Desktop Background" class="desktop-background">
+        </div>
         <section class="tasks-container">
           <form class="tasks-container-header">
-            <label for="task" class="task-form-label">Task</label>
+            <label for="task" class="task-form-label">New Task:</label>
             <input type="text" id="task" class="task-form-input" />
             <button type="submit" class="task-form-btn">Add</button>
           </form>
     
           <section class="tasks-body">
             <article class="task-unit">
-              <input type="checkbox" class="task-unit-checkbox" />
-              <p class="task-unit-item">Task 1</p>
+              <input type="radio" class="task-unit-checkbox" />
+              <p class="task-unit-item">10 minutes meditation</p>
               <button class="task-unit-delete">
-                &times;
+               x
               </button>
             </article>
     
             <article class="task-unit">
-              <input type="checkbox" class="task-unit-checkbox" />
-              <p class="task-unit-item">Task 2</p>
+              <input type="radio" class="task-unit-checkbox" />
+              <p class="task-unit-item">Read for 1 hour</p>
               <button class="task-unit-delete">
-                &times;
+                x
               </button>
             </article>
     
             <article class="task-unit">
-              <input type="checkbox" class="task-unit-checkbox" />
-              <p class="task-unit-item">Task 3</p>
+              <input type="radio" class="task-unit-checkbox" />
+              <p class="task-unit-item">Groceries Shopping</p>
               <button class="task-unit-delete">
-                &times;
+               x
               </button>
             </article>
+
+            <article class="task-unit">
+                <input type="radio" class="task-unit-checkbox" />
+                <p class="task-unit-item">Complete Todo app</p>
+                <button class="task-unit-delete">x
+                </button>
+              </article>
           </section>
         </section>
       </div> 
+      
       <script src="script.js"></script>
 </body>
 </html>

@@ -10,30 +10,74 @@ body {
   font-family: sans-serif;
   color: #333;
   font-size: 16px;
+  height: 100vh;
 }
 
-.container-1 {
-  max-width: 1280px;
+.container {
+  max-width: 100%;
   margin: 0 auto;
   padding: 20px;
-  min-height: 100vh;
+  height: 100vh;
+  background-color: hwb(235 9% 87%);
+  display: flex;
+  flex-direction: column;
+    gap: 20px;  
+}
+.container-header-1 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.header-content {
+    position: relative;
+    z-index: 2; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 330px;
+    padding: 10px;
+    margin: 0 auto;
+}
+.sun-icon {
+    width: 40px; 
+    height: 20px;
+    margin-top: 18px;
+}
+.desktop-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    z-index: 1; 
 }
 
 .tasks-heading {
   margin: 40px auto 20px;
   margin-top: 40px;
   text-align: center;
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
 }
 
 .tasks-container {
-  max-width: 450px;
   margin: 0 auto;
-  width: 100%;
+  width: 45%;
+  height: 380px;
   border: 1px solid #aaa;
   padding: 20px;
   border-radius: 6px;
+  background-color: hsl(233, 14%, 35%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  z-index: 2;
+  color: white;
 }
 
 .tasks-container-header {
@@ -51,6 +95,7 @@ body {
   box-shadow: none;
   padding: 5px 10px;
   border-radius: 6px;
+  height: 30px;
 }
 
 .task-form-btn {
@@ -66,6 +111,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 30px;
+}
+.task-form-btn:hover {
+  background-color: white;
+  color: blue;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgb(65, 65, 198);
+}
+.task-form-btn:active {
+  background-color: green;
+  color: white;
 }
 
 .tasks-body {
@@ -83,7 +139,7 @@ body {
   padding: 10px;
   display: flex;
   align-items: flex-start;
-  gap: 10px;
+  gap: 15px;
   position: relative;
 }
 
@@ -91,18 +147,54 @@ body {
   font-size: 14px;
   font-weight: 500;
 }
+.task-unit-checkbox {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #aaa;
+    border-radius: 10px;
+    cursor: pointer;
+    appearance: none;
+    background-color: transparent;
+}
+
+.task-unit-checkbox::before {
+    content: '\2713'; /* Unicode character for a checkmark */
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    color: blue; 
+    visibility: hidden;
+}
+.task-unit-checkbox:checked::before {
+    visibility: visible;
+}
 
 .task-unit-delete {
-  margin-left: auto;
-  background-color: red;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 15px;
-  height: 15px;
-  border-radius: 5px;
-  border: none;
-  box-shadow: none;
-  outline: none;
+    margin-left: auto;
+    background-color: red;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 17px;
+    height: 15px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
 }
+.task-unit-delete:hover {
+    background-color: white;
+    color: red;
+}
+.task-unit-delete:active {
+    background-color: green;
+    color: white;
+}
+
