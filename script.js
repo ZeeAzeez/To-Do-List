@@ -4,6 +4,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const tasksBody = document.querySelector('.tasks-body');
     const clearButton = document.createElement('button');
     
+    const themeToggler = document.querySelector('.theme-toggler');
+    const container = document.querySelector('.container');
+
+    themeToggler.addEventListener('click', function () {
+        container.classList.toggle('dark-mode');
+    });
+
     clearButton.textContent = 'Clear All';
     clearButton.className = 'task-form-btn clear-btn';
     

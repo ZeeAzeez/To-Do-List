@@ -181,6 +181,7 @@ body {
     cursor: pointer;
     appearance: none;
     background-color: transparent;
+    transition: background-color 0.3s ease-in-out;
 }
 .task-unit-checkbox:hover{
     background-color: rgb(233, 99, 233);
@@ -224,4 +225,28 @@ body {
     background-color: green;
     color: white;
 }
+.task-unit-delete,
+.task-form-btn {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        gap: 10px;
+    }
+
+    .tasks-container {
+        width: 100%;
+        margin-top: 50px;
+        border-radius: 0;
+    }
+
+    .header-content {
+        gap: 180px;
+        margin-top: 40px;
+    }
+}
+
+
+
 
